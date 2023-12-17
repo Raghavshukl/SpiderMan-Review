@@ -93,6 +93,23 @@
                 font-size: 4vw;
             }
         }
+
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
@@ -117,16 +134,37 @@
         <p>Marvel's Spider-Man 2 is a must-play for fans of superhero and open-world games. Its outstanding traversal mechanics, along with the game's depth and excitement, make it one of the best gaming experiences in years.</p>
         <h1>Gameplay</h1>
         <div class="gameplay">
-            <p>OVERALL I really liked SPIDER MAN 2 as it bring a lot to the table for Insomniac games and another masterpiece in their collection it was very innovative to bring 2 Spider man in one game </p>
+            <p>OVERALL I really liked SPIDER MAN 2 as it brings a lot to the table for Insomniac games and another masterpiece in their collection it was very innovative to bring 2 Spider man in one game </p>
             <iframe width="90%" height="400" src="https://www.youtube.com/embed/9fVYKsEmuRo" frameborder="0" allowfullscreen></iframe>
         </div>
         <h1>Character</h1>
         <div class="character">
             <p>The characters in the game were very cool. Kraven was one of the best side villains in the history of gaming. MJ was nice; she really helped as a side character in assisting both Spider-Man. I have nothing to say about Spider-Man as both of them were amazing.</p>
         </div>
-      </div>
-      <div>DEVELOPED BY RAGHAV</div>
+    </div>
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">&#9650; Top</button>
+
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("backToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
 </body>
+
 </html>
-
-
